@@ -5,6 +5,10 @@ class MeasuresController < ActionController::Base
     puts 'here!'
   end
 
+  def new
+    @message = Measure.all.count
+    puts 'here!'
+  end
 
 end
 
