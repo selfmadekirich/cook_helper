@@ -14,6 +14,6 @@ Rails.application.routes.draw do
   post '/recipes', to: 'recipes#create'
   delete '/recipes/:id', to: 'recipes#delete'
   get '/recipes/:id/sharelink', to: 'recipes#sharelink'
-  get '/recipes/edit', to: 'recipes#edit'
+  get '/recipes/:id/edit', to: 'recipes#edit'
 
 end
