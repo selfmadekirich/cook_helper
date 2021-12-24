@@ -4,6 +4,7 @@ class User < ApplicationRecord
   has_many :Ingredients
 
   #:id,:username, :login, :passwordHash = not nil
-  validates :id,:username, :login, :passwordHash, presence: true
+  validates :id,:username, :login, :password_digest, presence: true
+  has_secure_password
 end
 
