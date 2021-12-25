@@ -1,20 +1,19 @@
 <h1>
   Login
 </h1>
-<%= render 'layouts/errors' %>
-<%=form_for @user,remote: true  do |f| %>
+
+<%= form_for @user,url: auth_url,remote: true  do |f| %>
   <div class="field">
-    <%f.label 'login' %>
-    <%f.text_field :login %>
+    <%= f.label 'login' %>
+    <%= f.text_field :login %>
   </div>
   <div class="field">
-    <%f.label 'password' %>
-    <%f.text_field :password_field , type: :password %>
+    <%= f.label 'password' %>
+    <%= f.text_field :password , type: :password %>
   </div>
 
   <div class="field">
-    <%f.submit 'register'%>
+    <%= f.submit 'login'%>
   </div>
 
-
-<%end%>
+<% end %>
