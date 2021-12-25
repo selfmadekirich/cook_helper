@@ -1,0 +1,24 @@
+<h1>
+  Register
+</h1>
+<%= form_for @user, remote:true do |f| %>
+  <div class="field">
+    <%= f.label 'login' %>
+    <%= f.text_field :login %>
+  </div>
+  <div class="field">
+    <%= f.label 'Username' %>
+    <%= f.text_field :username %>
+  </div>
+  <div class="field">
+    <%= f.label 'password' %>
+    <%= f.text_field :password , type: :password %>
+  </div>
+  <div class="field">
+    <%= f.label 'password conformation' %>
+    <%= f.text_field :password_confirmation , type: :password %>
+  </div>
+  <div class="field">
+    <%= f.submit 'register'%>
+  </div>
+<% end %>

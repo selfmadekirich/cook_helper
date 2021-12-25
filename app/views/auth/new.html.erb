@@ -1,0 +1,19 @@
+<h1>
+  Login
+</h1>
+<%=form_for @user,remote: true  do |f| %>
+  <div class="field">
+    <%f.label 'login' %>
+    <%f.text_field :login %>
+  </div>
+  <div class="field">
+    <%f.label 'password' %>
+    <%f.text_field :password_field , type: :password %>
+  </div>
+
+  <div class="field">
+    <%f.submit 'register'%>
+  </div>
+
+
+<%end%>
