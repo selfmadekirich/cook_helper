@@ -13,6 +13,7 @@ class UsersController < ApplicationController
     end
     @user = User.create(user_params)
     if @user.valid?
+      session[:user_id] = @user.id
       redirect_to :controller => :measures
     else
       flash[:errors] =  @user.errors.full_messages.join
