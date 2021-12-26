@@ -1,8 +1,10 @@
-class MeasuresController < ActionController::Base
+class MeasuresController < ApplicationController
+
 
   def index
     @message = Measure.all.as_json
     puts 'here!'
+
   end
 
   def new
