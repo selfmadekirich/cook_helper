@@ -1,5 +1,7 @@
 class RecipesController < ActionController::Base
 
+  #before_action :authorise_user
+
     def index
       @message = Recipe.all.as_json
       puts 'here!'
