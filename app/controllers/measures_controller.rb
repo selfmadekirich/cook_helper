@@ -1,6 +1,6 @@
-class MeasuresController < ActionController::Base
+class MeasuresController < ApplicationController
 
-  layout "application"
+
   def index
     @message = Measure.all.as_json
     puts 'here!'

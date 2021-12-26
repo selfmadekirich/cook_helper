@@ -1,5 +1,5 @@
-class RecipesController < ActionController::Base
-  layout "application"
+class RecipesController < ApplicationController
+
   #before_action :authorise_user
 
     def index
