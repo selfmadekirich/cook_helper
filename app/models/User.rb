@@ -6,6 +6,7 @@ class User < ApplicationRecord
   #:id,:username, :login, :passwordHash = not nil
   validates :username, :login,  presence: true
 
+
   PASSWORD_FORMAT = /\A
   (?=.{8,})          # Must contain 8 or more characters
   (?=.*\d)           # Must contain a digit
