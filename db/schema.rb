@@ -44,10 +44,10 @@ ActiveRecord::Schema.define(version: 2021_12_24_222855) do
     t.string "name"
     t.text "instructions"
     t.string "meal_type", limit: 2
-    t.bigint "users_id"
+    t.bigint "user_id"
     t.bigint "ingredients_id"
     t.index ["ingredients_id"], name: "index_recipes_on_ingredients_id"
-    t.index ["users_id"], name: "index_recipes_on_users_id"
+    t.index ["user_id"], name: "index_recipes_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
