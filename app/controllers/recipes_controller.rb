@@ -15,14 +15,14 @@ class RecipesController < ApplicationController
     end
 
     def update
-      @recipes=Recipe.find_by @recipe_id
+      @recipes=Recipe.find_by_id session[:recipe_id]
       @recipes.name=params[:recipe][:name]
       @recipes.instructions=params[:recipe][:instructions]
       @recipes.meal_type=params[:recipe][:meal_type]
       @recipes.user=@current_user
       if(@recipes.valid?)
-        @recipes.update
-        redirect_to recipes_url
+        @recipes.update(name: params[:recipe][:name],instructions: params[:recipe][:instructions],meal_type: params[:recipe][:meal_type])
+        redirect_to recipes_url(@recipes)
       else
         flash[:errors] = @recipes.errors.full_messages.join
         redirect_to :action => :new
@@ -46,6 +46,7 @@ class RecipesController < ApplicationController
 
     def delete
       @recipes.find(:id).destroy
+      redirect_to recipes_url
     end
 
     def edit
