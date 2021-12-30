@@ -21,10 +21,9 @@ Rails.application.routes.draw do
   get '/recipes', to: 'recipes#index'
   get '/recipes/new', to: 'recipes#new'
   get '/recipes/:id', to: 'recipes#show'
-  put '/recipes/:id', to: 'recipes#update'
+  patch '/recipes', to: 'recipes#update'
   post '/recipes', to: 'recipes#create'
   delete '/recipes/:id', to: 'recipes#delete'
-  get '/recipes/:id/sharelink', to: 'recipes#sharelink'
   get '/recipes/:id/edit', to: 'recipes#edit'
 
 end

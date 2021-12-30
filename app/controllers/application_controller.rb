@@ -9,4 +9,7 @@ class ApplicationController < ActionController::Base
   def set_cur_user
     @current_user ||= User.find_by_id session[:user_id]
   end
+  def save_recipe_for_edit id
+    session[:recipe_id]=id
+  end
 end
