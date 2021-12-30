@@ -1,4 +1,13 @@
-<%= @recipes.each do |i| %>
-  <%= i.name%>
-
-<% end %>
+<center>
+  <h1 style="margin-bottom: 50px">Ваши рецепты:</h1>
+<a href="recipes/new" style="margin-bottom: 50px" class="floating-button">Create new</a>
+<% @recipes.each do |i| %>
+    <p>Блюдо: <%= i.name %> </p>
+    <p>Инструкция: <%= i.instructions %> </p>
+    <p>Тип: <%= i.meal_type %> </p>
+  <p></p>
+<div>
+  <a href="recipes/<%= i.id %>/edit" style="margin-bottom: 50px" class="floating-button">Edit this</a> <% end %>
+  <p></p>
+</div>
+</center>

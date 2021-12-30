@@ -1,22 +1,40 @@
-
+<center>
+  <aside class="text-center bg-gradient-primary-to-secondary">
+    <div class="container px-5">
+      <div class="row gx-5 justify-content-center">
+        <div class="col-xl-8">
 <%= form_for @recipes,url: recipes_url,remote: true  do |f| %>
   <div class="field" style="margin-bottom: 20px">
-    <h5 style="color:black">
+    <h5 style="color:white">
       <%= f.label 'Name' %>
     </h5>
     <%= f.text_field :name %>
   </div>
   <div class="field" style="margin-bottom: 20px">
-    <h5 style="color:black">
+    <h5 style="color:white">
       <%= f.label 'Instructions' %>
     </h5>
     <%= f.text_field :instructions %>
   </div>
   <div class="field" style="margin-bottom: 20px">
-    <h5 style="color:black">
+    <h5 style="color:white">
       <%= f.label 'Type' %>
     </h5>
     <%= f.text_field :meal_type %>
   </div>
   <%= f.submit 'Add' %>
+
+            <div class="field" style="margin-bottom: 40px">
+              <h5 style="margin-bottom: 20px"></h5>
+              <h5 style="margin-bottom: 20px">
+                <h5 style="color: white">Or</h5>
+              </h5>
+              <a href="/recipes" class="floating-button">Return</a>
+            </div>
+
+            </div>
+            </div>
+            </div>
+            </aside>
+            </center>
 <% end %>
