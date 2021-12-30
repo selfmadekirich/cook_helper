@@ -1,15 +1,13 @@
 class MeasuresController < ApplicationController
 
+  before_action :authorise_user
 
   def index
-    @message = Measure.all.as_json
-    puts 'here!'
-
+    @current_user.Measures.all
   end
 
   def new
-    @message = Measure.all.count
-    puts 'here!'
+    @measures = @measures.new
   end
 
 end
