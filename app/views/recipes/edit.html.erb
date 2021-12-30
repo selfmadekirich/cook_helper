@@ -1,8 +1,22 @@
-<html>
-<head></head>
-<body>
-<h1 style="margin-bottom: 100px">Hello!</h1>
-<p>Wubba Lubba from RECIPES EDIT</p>
-<p><%= @message %></p>
-</body>
-</html>
+
+<%= form_for @recipes,url: recipes_url,remote: true  do |f| %>
+  <div class="field" style="margin-bottom: 20px">
+    <h5 style="color:black">
+      <%= f.label 'new Name' %>
+    </h5>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field" style="margin-bottom: 20px">
+    <h5 style="color:black">
+      <%= f.label 'New Instructions' %>
+    </h5>
+    <%= f.text_field :instructions %>
+  </div>
+  <div class="field" style="margin-bottom: 20px">
+    <h5 style="color:black">
+      <%= f.label 'New type' %>
+    </h5>
+    <%= f.text_field :meal_type %>
+  </div>
+  <%= f.submit 'Update' %>
+<% end %>
