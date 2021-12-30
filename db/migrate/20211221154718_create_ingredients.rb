@@ -4,7 +4,7 @@ class CreateIngredients < ActiveRecord::Migration[6.1]
       t.string :name
       t.integer :amount
       t.string :meal_type , limit:2
-      t.belongs_to :user,:recipes
+      t.belongs_to :user,:recipes , index:true
     end
   end
 

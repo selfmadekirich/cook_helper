@@ -4,7 +4,7 @@ class CreateMeasures < ActiveRecord::Migration[6.1]
       t.string :meas_name , null:false
       t.integer :grams, null:false
       t.string :meas_role , null:false
-      t.belongs_to :user
+      t.belongs_to :user ,index:true
     end
   end
 

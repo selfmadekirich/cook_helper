@@ -1,6 +1,6 @@
 class Ingredient < ApplicationRecord
   has_many :Recipe, through: :Ingred_Recipe
-  belongs_to :User
+  belongs_to :user
   validates :meas_type ,length:{is: 2}
 
   #:name,:amount,:meas_type = not nil
