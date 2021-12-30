@@ -1,24 +1,56 @@
-<h1>
-  Register
+<center>
+<h1 style="margin-bottom: 50px">
+  Регистрация
 </h1>
+</center>
+
+<aside class="text-center bg-gradient-primary-to-secondary">
+  <div class="container px-5">
+    <div class="row gx-5 justify-content-center">
+      <div class="col-xl-8">
+
 <%= form_for @user, remote:true do |f| %>
-  <div class="field">
+
+  <div class="field" style="margin-bottom: 20px" >
+    <h5 style="color: white">
     <%= f.label 'login' %>
+    </h5>
     <%= f.text_field :login %>
   </div>
-  <div class="field">
+
+  <div class="field" style="margin-bottom: 20px">
+    <h5 style="color: white">
     <%= f.label 'Username' %>
+    </h5>
     <%= f.text_field :username %>
   </div>
-  <div class="field">
+
+  <div class="field" style="margin-bottom: 20px">
+    <h5 style="color: white">
     <%= f.label 'password' %>
+    </h5>
     <%= f.text_field :password , type: :password %>
   </div>
-  <div class="field">
-    <%= f.label 'password conformation' %>
+
+  <div class="field" style="margin-bottom: 20px">
+    <h5 style="color: white">
+    <%=  f.label 'password conformation' %>
+    </h5>
     <%= f.text_field :password_confirmation , type: :password %>
   </div>
-  <div class="field">
-    <%= f.submit 'register'%>
+
+  <div class="field" style="margin-bottom: 20px">
+    <%= f.submit 'Registration'%>
   </div>
+
+          <h5 style="margin-bottom: 20px"></h5>
+          <h5 style="margin-bottom: 20px">
+            <h5 style="color: white">Or</h5>
+          </h5>
+          <a href="/auth" class="floating-button">Log In</a>
+
+          </div>
+          </div>
+          </div>
+          </aside>
 <% end %>

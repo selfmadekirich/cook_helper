@@ -1,19 +1,41 @@
-<h1>
-  Login
+<center>
+<h1 style="margin-bottom: 100px">
+  Вход
 </h1>
 
+  <aside class="text-center bg-gradient-primary-to-secondary">
+    <div class="container px-5">
+      <div class="row gx-5 justify-content-center">
+        <div class="col-xl-8">
+
 <%= form_for @user,url: auth_url,remote: true  do |f| %>
-  <div class="field">
+
+  <div class="field" style="margin-bottom: 20px">
+    <h5 style="color:white">
     <%= f.label 'login' %>
+    </h5>
     <%= f.text_field :login %>
   </div>
-  <div class="field">
+
+  <div class="field" style="margin-bottom: 20px">
+    <h5 style="color:white">
     <%= f.label 'password' %>
+    </h5>
     <%= f.text_field :password , type: :password %>
   </div>
 
-  <div class="field">
-    <%= f.submit 'login'%>
+  <div class="field" style="margin-bottom: 40px">
+    <%= f.submit 'Login' %>
+    <h5 style="margin-bottom: 20px"></h5>
+    <h5 style="margin-bottom: 20px">
+    <h5 style="color: white">Or</h5>
+    </h5>
+    <a href="/users" class="floating-button">Registration</a>
   </div>
+            </div>
+            </div>
+            </div>
+            </aside>
 
+    </center>
 <% end %>
