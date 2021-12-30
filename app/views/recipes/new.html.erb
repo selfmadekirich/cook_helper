@@ -1,4 +1,22 @@
 
-<h1 style="margin-bottom: 100px">Hello!</h1>
-<p>Wubba Lubba from RECIPES NEW</p>
-<p><%= @message %></p>
+<%= form_for @recipes,url: recipes_url,remote: true  do |f| %>
+  <div class="field" style="margin-bottom: 20px">
+    <h5 style="color:black">
+      <%= f.label 'Name' %>
+    </h5>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field" style="margin-bottom: 20px">
+    <h5 style="color:black">
+      <%= f.label 'Instructions' %>
+    </h5>
+    <%= f.text_field :instructions %>
+  </div>
+  <div class="field" style="margin-bottom: 20px">
+    <h5 style="color:black">
+      <%= f.label 'Type' %>
+    </h5>
+    <%= f.text_field :meal_type %>
+  </div>
+  <%= f.submit 'Add' %>
+<% end %>
