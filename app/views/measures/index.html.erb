@@ -1,3 +1,9 @@
-<h1 style="margin-bottom: 100px" >Hello!</h1>
-<p>Wubba Lubba from MEASURES</p>
-<p><%= @message %></p>
+<%= form_for @measures,url: measures_url+'/conv',remote: true  do |f| %>
+  <div class="field" style="margin-bottom: 20px">
+    <h5 style="color:black">
+      <%= f.label 'Grams' %>
+    </h5>
+    <%= f.text_field :grams %>
+  </div>
+  <%= f.submit 'Convert' %>
+<% end %>
