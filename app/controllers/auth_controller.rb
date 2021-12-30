@@ -8,7 +8,7 @@ class AuthController < ApplicationController
     @user = User.find_by_login params[:user][:login]
     if not @user.blank? and  BCrypt::Password::new(@user.password_digest) == params[:user][:password]
       session[:user_id] = @user.id
-      redirect_to recipes_url
+      redirect_to root_url
     else
       flash[:errors] =  "login or password is incorrect"
       redirect_to :action => :new
