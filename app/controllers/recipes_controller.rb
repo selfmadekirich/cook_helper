@@ -3,19 +3,15 @@ class RecipesController < ApplicationController
   before_action :authorise_user
 
     def index
-      @message = Recipe.all.as_json
-      puts 'here!'
-
+      @current_user.Recipes.all;
     end
   
     def new
-        @message = Recipe.all.as_json
-        puts 'here!'
+      @recipes=@recipes.new;
     end
 
     def show
-        @message = Recipe.all.as_json
-        puts 'here!'
+      @recipes=Recipe.find_by params[:id];
     end
 
     def update
@@ -39,8 +35,7 @@ class RecipesController < ApplicationController
     end
 
     def edit
-        @message = Recipe.all.as_json
-        puts 'here!'
+      @recipes=Recipe.find_by params[:id];
     end
   
   end
