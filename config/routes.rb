@@ -13,9 +13,11 @@ Rails.application.routes.draw do
 
 
   #Measures
-  get '/measures/:amount', to: 'measures#index'
-  get '/measures/new', to: 'measures#new'
+  get '/measures', to: 'measures#index'
+  post '/measures/conv', to:'measures#conv'
+  get '/measures/convert/', to: 'measures#convert'
   post '/measures', to: 'measures#create'
+  get '/measures/new', to: 'measures#new'
 
   #Recipes
   get '/recipes', to: 'recipes#index'

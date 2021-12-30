@@ -1,0 +1,5 @@
+<%= "У вас есть #{session[:grams]} грамм" %>
+<% @measures.each do |i| %>
+  <%= "Вам понадобится #{i.meas_name} в количестве #{(session[:grams].to_f.div(i.grams.to_f)) + 1} единиц\n" %>
+
+<% end %>

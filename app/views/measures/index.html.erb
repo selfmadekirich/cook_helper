@@ -1,2 +1,9 @@
-<% @measures.each do |measure| %>
-    <% measure.meas_name %>
+<%= form_for @measures,url: measures_url+'/conv',remote: true  do |f| %>
+  <div class="field" style="margin-bottom: 20px">
+    <h5 style="color:black">
+      <%= f.label 'Grams' %>
+    </h5>
+    <%= f.text_field :grams %>
+  </div>
+  <%= f.submit 'Convert' %>
+<% end %>
