@@ -1,5 +1,20 @@
+<center>
+  <aside class="text-center bg-gradient-primary-to-secondary">
+    <div class="container px-5">
+      <div class="row gx-5 justify-content-center">
+        <div class="col-xl-8" style="color:white">
 <%= "У вас есть #{session[:grams]} грамм" %>
 <% @measures.each do |i| %>
+            <p></p>
   <%= "Вам понадобится #{i.meas_name} в количестве #{(session[:grams].to_f.div(i.grams.to_f)) + 1} единиц\n" %>
 
 <% end %>
+          <p></p>
+          <h5 style="color: white">Or</h5>
+          </h5>
+          <a href="/measures/new" class="floating-button">New metric</a>
+        </div>
+      </div>
+    </div>
+  </aside>
+</center>
